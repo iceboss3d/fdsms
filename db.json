@@ -1,0 +1,11 @@
+{
+  "designs": [
+    {
+      "id": 1,
+      "name": "First Style",
+      "designer": "Louis Vuitton",
+      "category": "Shirts",
+      "isDeleted": "false"
+    }
+  ]
+}
