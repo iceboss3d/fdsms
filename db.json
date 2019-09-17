@@ -5,7 +5,9 @@
       "name": "First Style",
       "designer": "Louis Vuitton",
       "category": "Shirts",
-      "isDeleted": "false"
+      "image": "https://via.placeholder.com/150x80",
+      "description": "Lorem ipsum",
+      "isDeleted": false
     }
   ]
 }
