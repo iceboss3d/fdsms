@@ -25,7 +25,7 @@
     <div class="container my-4">
       <h1 class="display-4">Create New Design</h1>
       <div class="my-4">
-        <form>
+        <form id="createDesignForm">
           <div class="form-group row">
             <label for="name" class="col-md-2">Design Name</label>
             <input type="text" name="name" id="name" class="form-control col-md-6" placeholder="Design Name">
@@ -47,20 +47,21 @@
           <div class="form-group row">
             <label for="description" class="col-md-2">Description</label>
             <textarea name="description" id="description" cols="30" rows="5"
-              class="form-control col-md-6">Description</textarea>
+              class="form-control col-md-6" placeholder="Description"></textarea>
           </div>
           <div class="form-group row">
             <label for="image" class="col-md-2">Image URL</label>
             <input type="url" name="image" id="image" class="form-control col-md-6" placeholder="Image URL">
           </div>
-          <input type="submit" value="Submit" class="btn btn-secondary btn-lg">
+          <input type="submit" value="Submit" class="btn btn-secondary btn-lg" id="formSubmit" onsubmit="return false">
         </form>
       </div>
     </div>
   </main>
 
-  <script src="./js//jquery.js"></script>
+  <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
