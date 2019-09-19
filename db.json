@@ -9,189 +9,101 @@
       "id": 1
     },
     {
-      "name": "Fare",
-      "designer": "dff",
+      "name": "Ankara Dress",
+      "designer": "The Guardian",
       "category": "Shirt",
-      "description": "Bla, bla, bla",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 2,
-      "isDeleted": "true"
+      "description": "A simple ankara attire",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "false",
+      "id": 2
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "sgdhdhd",
-      "image": "https://safescrow.com.ng",
+      "name": "Another Ankara Design",
+      "designer": "Emibere'A Designs",
+      "category": "Gowns",
+      "description": "Designed by a bespoke fashion designer",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "true",
       "id": 3
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "gdgdg",
-      "image": "https://safescrow.com.ng",
+      "name": "First Style",
+      "designer": "Givenchy",
+      "category": "Trousers",
+      "description": "Modeled after the honorable Givenchy",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "false",
       "id": 4
     },
     {
       "name": "Fare",
-      "designer": "Fared",
+      "designer": "Louis Vuitton",
       "category": "Trousers",
-      "description": "ddhdh",
-      "image": "https://safescrow.com.ng",
+      "description": "Hello from the other side",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "true",
       "id": 5
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "cdhdhh",
-      "image": "https://safescrow.com.ng",
+      "name": "new desin",
+      "designer": "Emibere'A Designs",
+      "category": "Trousers",
+      "description": "A bespoke design by Emibere'A",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "true",
       "id": 6
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "dshdhhd",
-      "image": "https://safescrow.com.ng",
+      "name": "Design Name",
+      "designer": "Gloria Thompson",
+      "category": "Suits",
+      "description": "The edited section",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
       "id": 7
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "dsbhdhhd",
-      "image": "https://safescrow.com.ng",
+      "name": "Designated Name",
+      "designer": "Gloria Thompson",
+      "category": "Suits",
+      "description": "The edited section altered part",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
       "id": 8
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "ddhjf",
-      "image": "https://safescrow.com.ng",
+      "name": "Design Name",
+      "designer": "Gloria Thompson",
+      "category": "Gowns",
+      "description": "The edited section altered",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "false",
       "id": 9
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "dhdhd",
-      "image": "https://safescrow.com.ng",
+      "name": "Designated Name",
+      "designer": "Gloria Thompson",
+      "category": "Gowns",
+      "description": "The edited section altered part",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "true",
       "id": 10
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
+      "name": "Designated Name1",
+      "designer": "Gloria Thompson",
       "category": "Shirt",
-      "description": "dhd",
-      "image": "https://safescrow.com.ng",
+      "description": "The edited section altered part",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "true",
       "id": 11
     },
     {
-      "name": "Fare",
-      "designer": "Fared",
+      "name": "Designated Name",
+      "designer": "Gloria Thompson",
       "category": "Shirt",
-      "description": "dhdh",
-      "image": "https://safescrow.com.ng",
+      "description": "The edited section altered part",
+      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "isDeleted": "false",
       "id": 12
-    },
-    {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "dhdhdg",
-      "image": "https://safescrow.com.ng",
-      "id": 13
-    },
-    {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Shirt",
-      "description": "dhdhdh",
-      "image": "https://safescrow.com.ng",
-      "id": 14
-    },
-    {
-      "name": "new desin",
-      "designer": "ghhern",
-      "category": "Trousers",
-      "description": "jdhhcnckdkl",
-      "image": "https://safescrow.com.ng",
-      "id": 15
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Suits",
-      "description": "Lorem ipsum",
-      "image": "https://via.placeholder.com/150x80",
-      "id": 16
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Trousers",
-      "description": "Lorem ipsum",
-      "image": "https://via.placeholder.com/150x80",
-      "id": 17
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Suits",
-      "description": "We updated a couple of stuffs in this description.",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 18
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Shirt",
-      "description": "We updated a couple of stuffs in this description.",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 19
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Trousers",
-      "description": "We updated a couple of stuffs in this description.",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 20
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Shirt",
-      "description": "We updated a couple of stuffs in this description.",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 21
-    },
-    {
-      "name": "First Style",
-      "designer": "Louis Vuitton",
-      "category": "Shirt",
-      "description": "We updated a couple of stuffs in this description.",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 22
-    },
-    {
-      "name": "Fare",
-      "designer": "Fared",
-      "category": "Category",
-      "description": "sjsjdjj",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 23
-    },
-    {
-      "name": "Fare",
-      "designer": "dff",
-      "category": "Shirt",
-      "description": "Bla, bla, bla",
-      "image": "https://via.placeholder.com/600x400",
-      "id": 24
     }
   ]
 }

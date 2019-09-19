@@ -15,25 +15,32 @@
     <div class="container">
       <a class="navbar-brand" href="/">FDSMS</a>
       <div class="navbar-nav">
-        <a href="/" class="nav-item nav-link active">Home <span class="sr-only">(current)</span></a>
+        <a href="/" class="nav-item nav-link">Home</a>
         <a href="/create-design.html" class="nav-item nav-link">Create Design</a>
       </div>
     </div>
   </nav>
   <main>
     <div class="container my-4">
-      <h1 class="display-4">Design Name</h1>
+      <h1 class="display-4" id="designName"></h1>
+      <h3><small>By: <span id="designerName"></span></small></h3>
       <div class="row my-4">
-        <div class="col-md-8">
-          <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Design Image">
+        <div class="col-md-9">
+          <img src="https://via.placeholder.com/600x400" id="designImg" class="img-fluid" alt="Design Image">
+          <p class="lead">Category: <span id="category"></span></p>
+          <p id="description"></p>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-3">
+          <a href="/update-design.html" id="updateLink" class="btn btn-secondary btn-block">Edit Design</a>
+          <button class="btn btn-danger btn-block" id="deleteDesign">Delete Design</button>
+        </div>
       </div>
     </div>
   </main>
 
   <script src="./js//jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
