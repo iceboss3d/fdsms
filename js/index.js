@@ -8,12 +8,12 @@ $(document).ready(function() {
     url: "http://localhost:3000/designs",
     type: "GET",
     success: function(response) {
-      let mapped = response.map(style => {
-        if (!response.isDeleted) {
-          console.log(style);
+      let filtered = response.filter(p => p.isDeleted === "false");
+      let mapped = filtered.reverse().map(style => {
+        
           return `<div class="col-md-4 my-2">
         <div class="card">
-          <img src="https://via.placeholder.com/150x80" alt="card" class="card-img">
+          <img src=${style.image} alt="card" class="card-img">
           <div class="card-body">
             <h5 class="card-title">${style.name} <br><small>${style.designer}</small></h5>
             <p class="card-text">
@@ -23,20 +23,20 @@ $(document).ready(function() {
           </div>
         </div>
       </div>`;
-        }
-      });
+        });
       $("#designsDisplay").html(mapped);
     }
   });
 
   // Create design function
-  $("form").on("submit", function(e) {
+  $("createDesignForm").on("submit", function(e) {
     e.preventDefault();
     let name = $("#name").val();
     let designer = $("#designer").val();
     let category = $("#category").val();
     let description = $("#description").val();
     let image = $("#image").val();
+    let isDeleted = false;
 
     $.ajax({
       url: "http://localhost:3000/designs",
@@ -45,8 +45,9 @@ $(document).ready(function() {
           alert("Successful");
         }
       },
-      success: function(response) {
-        console.log(response);
+      success: function(res){
+        window.location.href = `/design.html?id=${res.id}`,
+        alert("Design Successfully Created");
       },
       type: "POST",
       data: {
@@ -54,7 +55,8 @@ $(document).ready(function() {
         designer,
         category,
         description,
-        image
+        image,
+        isDeleted,
       }
     });
   });
@@ -80,7 +82,6 @@ $(document).ready(function() {
         //$(`#category`).val(category);
         $("#description").text(description);
         $("#image").attr("value", image);
-        console.log(response);
       }
     });
   }
@@ -95,7 +96,7 @@ $(document).ready(function() {
     let image = $("#image").val();
     $.ajax({
       url: `http://localhost:3000/designs/${id}`,
-      type: "PUT",
+      method: "PATCH",
       data: {
         name,
         designer,
@@ -111,15 +112,19 @@ $(document).ready(function() {
 
   // Delete Design
   $("#deleteDesign").on("click", function() {
-    $.ajax({
-      url: `http://localhost:3000/designs/${id}`,
-      type: "PATCH",
-      data: {
-        isDeleted: true
-      }
-    }).done(function() {
-      window.location.href = `/`;
-      alert("Design Successfully Deleted");
-    });
+    let confirmed = confirm("Confirm Delete");
+
+    if(confirmed){
+      $.ajax({
+        url: `http://localhost:3000/designs/${id}`,
+        type: "PATCH",
+        data: {
+          isDeleted: true
+        }
+      }).done(function() {
+        window.location.href = `/`;
+        alert("Design Successfully Deleted");
+      });
+    }
   });
 });
