@@ -26,9 +26,9 @@
       <h1 class="display-4">Dashboard</h1>
       <div class="my-4 d-flex" style="justify-content: space-between; flex-wrap:wrap">
         <a href="/create-design.html" class="btn btn-secondary" id="createButton">Create New Design</a>
-        <form class="form-inline flex-nowrap" id="searchForm">
-          <input type="text" name="search" id="search" placeholder="Search Design" class="form-control">
-          <input type="button" value="Search" class="btn btn-secondary">
+        <form class="form-inline flex-nowrap" id="searchForm" action="search.html" method="GET">
+          <input type="text" name="query" id="query" placeholder="Search Design" class="form-control">
+          <input type="submit" value="Search" class="btn btn-secondary">
         </form>
       </div>
       <h3>Latest Designs</h3>
