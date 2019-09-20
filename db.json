@@ -6,104 +6,19 @@
       "category": "Shirt",
       "description": "We updated a couple of stuffs in this description.",
       "image": "https://via.placeholder.com/600x400",
-      "id": 1
+      "id": 1,
+      "price": 250,
+      "isDeleted": "false"
     },
     {
-      "name": "Ankara Dress",
-      "designer": "The Guardian",
-      "category": "Shirt",
-      "description": "A simple ankara attire",
+      "name": "Za Collection",
+      "designer": "Louis Vuitton",
+      "category": "Suits",
+      "description": "Something",
       "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
+      "price": "52000",
       "isDeleted": "false",
       "id": 2
-    },
-    {
-      "name": "Another Ankara Design",
-      "designer": "Emibere'A Designs",
-      "category": "Gowns",
-      "description": "Designed by a bespoke fashion designer",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "true",
-      "id": 3
-    },
-    {
-      "name": "First Style",
-      "designer": "Givenchy",
-      "category": "Trousers",
-      "description": "Modeled after the honorable Givenchy",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "false",
-      "id": 4
-    },
-    {
-      "name": "Fare",
-      "designer": "Louis Vuitton",
-      "category": "Trousers",
-      "description": "Hello from the other side",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "true",
-      "id": 5
-    },
-    {
-      "name": "new desin",
-      "designer": "Emibere'A Designs",
-      "category": "Trousers",
-      "description": "A bespoke design by Emibere'A",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "true",
-      "id": 6
-    },
-    {
-      "name": "Design Name",
-      "designer": "Gloria Thompson",
-      "category": "Suits",
-      "description": "The edited section",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "id": 7
-    },
-    {
-      "name": "Designated Name",
-      "designer": "Gloria Thompson",
-      "category": "Suits",
-      "description": "The edited section altered part",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "id": 8
-    },
-    {
-      "name": "Design Name",
-      "designer": "Gloria Thompson",
-      "category": "Gowns",
-      "description": "The edited section altered",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "false",
-      "id": 9
-    },
-    {
-      "name": "Designated Name",
-      "designer": "Gloria Thompson",
-      "category": "Gowns",
-      "description": "The edited section altered part",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "true",
-      "id": 10
-    },
-    {
-      "name": "Designated Name1",
-      "designer": "Gloria Thompson",
-      "category": "Shirt",
-      "description": "The edited section altered part",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "true",
-      "id": 11
-    },
-    {
-      "name": "Designated Name",
-      "designer": "Gloria Thompson",
-      "category": "Shirt",
-      "description": "The edited section altered part",
-      "image": "https://guardian.ng/wp-content/uploads/2018/08/d9310cb9c732a87ee133e80d8aa993dd-ankara-pencil-skirt-african-pencil-skirt-1062x598.jpg",
-      "isDeleted": "false",
-      "id": 12
     }
   ]
 }
