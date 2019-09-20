@@ -1,3 +1,20 @@
+$("#invalid").hide();
+$("#valid").hide();
+let loggedIn = false;
+let user = window.localStorage.getItem('user');
+if(user){
+  loggedIn = true;
+} else {
+  loggedIn = false;
+}
+
+if(loggedIn){
+  $('.logged-in').show();
+  $('.logged-out').hide();
+} else {
+  $('.logged-in').hide();
+  $('.logged-out').show();
+}
 $(document).ready(function() {
   // Utility Function
   // URL Params
@@ -139,4 +156,30 @@ $(document).ready(function() {
       });
     }
   });
+
+  // Login functionality
+  $("#loginForm").on("submit", e => {
+    e.preventDefault();
+    let username = $("#username").val();
+    let password = $("#password").val();
+    $.ajax({
+      url: `http://localhost:3000/users?username=${username}&password=${password}`,
+      method: "GET"
+    }).done(response => {
+      if (response) {
+        window.localStorage.setItem("user", username);
+        $("#valid").show();
+        $("#invalid").hide();
+        window.location = "/";
+      } else {
+        $("#valid").hide();
+        $("#invalid").show();
+      }
+    });
+  });
+  // Log Out functionality
+  $('#logout').on('click', () => {
+    window.localStorage.removeItem('user');
+    window.location = "/login.html";
+  })
 });
