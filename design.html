@@ -16,7 +16,11 @@
       <a class="navbar-brand" href="/">FDSMS</a>
       <div class="navbar-nav">
         <a href="/" class="nav-item nav-link">Home</a>
-        <a href="/create-design.html" class="nav-item nav-link">Create Design</a>
+        <a href="/create-design.html" class="nav-item nav-link logged-in">Create Design</a>
+      </div>
+      <div class="navbar-nav">
+        <a href="/login.html" class="nav-item nav-link logged-out">Admin Login</a>
+        <button type="button" class="nav-item nav-link btn btn-secondary logged-in">Log Out</button>
       </div>
     </div>
   </nav>
@@ -31,7 +35,7 @@
           <p id="description"></p>
           <p id="price"></p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 logged-in">
           <a href="/update-design.html" id="updateLink" class="btn btn-secondary btn-block">Edit Design</a>
           <button class="btn btn-danger btn-block" id="deleteDesign">Delete Design</button>
         </div>
