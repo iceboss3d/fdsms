@@ -11,60 +11,76 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="/">FDSMS</a>
-          <div class="navbar-nav">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/create-design.html" class="nav-item nav-link">Create Design</a>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">FDSMS</a>
+      <div class="navbar-nav">
+        <a href="/" class="nav-item nav-link">Home</a>
+        <a href="/create-design.html" class="nav-item nav-link logged-in">Create Design</a>
+      </div>
+      <div class="navbar-nav">
+        <a href="/login.html" class="nav-item nav-link logged-out">Admin Login</a>
+        <button type="button" class="nav-item nav-link btn btn-secondary logged-in" id="logout">Log Out</button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container my-4">
+      <h1 class="display-4">Update Design</h1>
+      <div class="my-4">
+        <form id="updateForm">
+          <div class="form-group row">
+            <label for="name" class="col-md-2">Design Name</label>
+            <input type="text" name="name" id="name" class="form-control col-md-6" placeholder="Design Name">
           </div>
-        </div>
-      </nav>
-      <main>
-          <div class="container my-4">
-            <h1 class="display-4">Update Design</h1>
-            <div class="my-4">
-              <form id="updateForm">
-                <div class="form-group row">
-                  <label for="name" class="col-md-2">Design Name</label>
-                  <input type="text" name="name" id="name" class="form-control col-md-6" placeholder="Design Name">
-                </div>
-                <div class="form-group row">
-                  <label for="designer" class="col-md-2">Designer</label>
-                  <input type="text" name="designer" id="designer" class="form-control col-md-6" placeholder="Designer">
-                </div>
-                <div class="form-group row">
-                  <label for="category" class="col-md-2">Category</label>
-                  <select name="category" id="category" class="form-control col-md-6">
-                    <option>Category</option>
-                    <option value="Shirt">Shirt</option>
-                    <option value="Trousers">Trousers</option>
-                    <option value="Suits">Suits</option>
-                    <option value="Gowns">Gowns</option>
-                  </select>
-                </div>
-                <div class="form-group row">
-                  <label for="description" class="col-md-2">Description</label>
-                  <textarea name="description" id="description" cols="30" rows="5"
-                    class="form-control col-md-6">Description</textarea>
-                </div>
-                <div class="form-group row">
-                    <label for="price" class="col-md-2">Price</label>
-                    <input type="number" name="price" id="price" class="form-control col-md-6" placeholder="Price">
-                  </div>
-                <div class="form-group row">
-                  <label for="image" class="col-md-2">Image URL</label>
-                  <input type="url" name="image" id="image" class="form-control col-md-6" placeholder="Image URL">
-                </div>
-                <input type="submit" value="Update" class="btn btn-secondary btn-lg">
-              </form>
-            </div>
+          <div class="form-group row">
+            <label for="designer" class="col-md-2">Designer</label>
+            <input type="text" name="designer" id="designer" class="form-control col-md-6" placeholder="Designer">
           </div>
-        </main>
+          <div class="form-group row">
+            <label for="category" class="col-md-2">Category</label>
+            <select name="category" id="category" class="form-control col-md-6">
+              <option>Category</option>
+              <option value="Shirt">Shirt</option>
+              <option value="Trousers">Trousers</option>
+              <option value="Suits">Suits</option>
+              <option value="Gowns">Gowns</option>
+            </select>
+          </div>
+          <div class="form-group row">
+            <label for="description" class="col-md-2">Description</label>
+            <textarea name="description" id="description" cols="30" rows="5"
+              class="form-control col-md-6">Description</textarea>
+          </div>
+          <div class="form-group row">
+            <label for="price" class="col-md-2">Price</label>
+            <input type="number" name="price" id="price" class="form-control col-md-6" placeholder="Price">
+          </div>
+          <div class="form-group row">
+            <label for="image" class="col-md-2">Image URL</label>
+            <input type="url" name="image" id="image" class="form-control col-md-6" placeholder="Image URL">
+          </div>
+          <input type="submit" value="Update" class="btn btn-secondary btn-lg">
+        </form>
+      </div>
+    </div>
+  </main>
 
   <script src="./js//jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
   <script src="./js/index.js"></script>
+  <script>
+    let loggedIn = false;
+    let user = window.localStorage.getItem('user');
+    if (user) {
+      loggedIn = true;
+    } else {
+      loggedIn = false;
+    }
+    if (!loggedIn){
+      window.location = '/login.html';
+    }
+  </script>
 </body>
 
 </html>

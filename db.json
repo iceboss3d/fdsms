@@ -20,5 +20,12 @@
       "isDeleted": "false",
       "id": 2
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "password"
+    }
   ]
 }

@@ -16,8 +16,12 @@
       <a class="navbar-brand" href="/">FDSMS</a>
       <div class="navbar-nav">
         <a href="/" class="nav-item nav-link">Home</a>
-        <a href="/create-design.html" class="nav-item nav-link active">Create Design<span
+        <a href="/create-design.html" class="nav-item nav-link logged-in active">Create Design <span
             class="sr-only">(current)</span></a>
+      </div>
+      <div class="navbar-nav">
+        <a href="/login.html" class="nav-item nav-link logged-out">Admin Login</a>
+        <button type="button" class="nav-item nav-link btn btn-secondary logged-in" id="logout">Log Out</button>
       </div>
     </div>
   </nav>
@@ -32,7 +36,8 @@
           </div>
           <div class="form-group row">
             <label for="designer" class="col-md-2">Designer</label>
-            <input type="text" name="designer" id="designer" class="form-control col-md-6" placeholder="Designer" required>
+            <input type="text" name="designer" id="designer" class="form-control col-md-6" placeholder="Designer"
+              required>
 
           </div>
           <div class="form-group row">
@@ -47,8 +52,8 @@
           </div>
           <div class="form-group row">
             <label for="description" class="col-md-2">Description</label>
-            <textarea name="description" id="description" cols="30" rows="5"
-              class="form-control col-md-6" placeholder="Description" required></textarea>
+            <textarea name="description" id="description" cols="30" rows="5" class="form-control col-md-6"
+              placeholder="Description" required></textarea>
           </div>
           <div class="form-group row">
             <label for="price" class="col-md-2">Price</label>
@@ -67,6 +72,18 @@
   <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
   <script src="./js/index.js"></script>
+  <script>
+    let loggedIn = false;
+    let user = window.localStorage.getItem('user');
+    if (user) {
+      loggedIn = true;
+    } else {
+      loggedIn = false;
+    }
+    if (!loggedIn){
+      window.location = '/login.html';
+    }
+  </script>
 </body>
 
 </html>

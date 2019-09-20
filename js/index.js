@@ -1,3 +1,20 @@
+$("#invalid").hide();
+$("#valid").hide();
+let loggedIn = false;
+let user = window.localStorage.getItem('user');
+if(user){
+  loggedIn = true;
+} else {
+  loggedIn = false;
+}
+
+if(loggedIn){
+  $('.logged-in').show();
+  $('.logged-out').hide();
+} else {
+  $('.logged-in').hide();
+  $('.logged-out').show();
+}
 $(document).ready(function() {
   // Utility Function
   // URL Params
@@ -6,58 +23,61 @@ $(document).ready(function() {
   // Get data from database
   $.ajax({
     url: "http://localhost:3000/designs",
-    type: "GET",
+    method: "GET",
     success: function(response) {
       let filtered = response.filter(p => p.isDeleted === "false");
       let mapped = filtered.reverse().map(style => {
-        
-          return `<div class="col-md-4 my-2">
+        return `<div class="col-md-4 my-2">
         <div class="card">
           <img src=${style.image} alt="card" class="card-img">
           <div class="card-body">
-            <h5 class="card-title">${style.name} <br><small>${style.designer}</small></h5>
+            <h5 class="card-title">${style.name} <br><small>${
+          style.designer
+        }</small></h5>
             <p class="card-text">
               <small>${style.category}</small>
             </p>
-            <a href="/design.html?id=${style.id}" class="btn btn-secondary btn-lg">View Design</a>
-          </div>
+            <p>${parseFloat(style.price).toLocaleString("en-NG", {
+              style: "currency",
+              currency: "NGN"
+            })}</p><a href="/design.html?id=${
+          style.id
+        }" class="btn btn-secondary btn-lg">View Design</a></div>
         </div>
       </div>`;
-        });
+      });
       $("#designsDisplay").html(mapped);
     }
   });
 
   // Create design function
-  $("createDesignForm").on("submit", function(e) {
+  $("#createDesignForm").on("submit", function(e) {
     e.preventDefault();
     let name = $("#name").val();
     let designer = $("#designer").val();
     let category = $("#category").val();
     let description = $("#description").val();
     let image = $("#image").val();
+    let price = $("#price").val();
     let isDeleted = false;
 
     $.ajax({
       url: "http://localhost:3000/designs",
-      statusCode: {
-        200: function() {
-          alert("Successful");
-        }
-      },
-      success: function(res){
-        window.location.href = `/design.html?id=${res.id}`,
-        alert("Design Successfully Created");
-      },
-      type: "POST",
+      method: "POST",
       data: {
         name,
         designer,
         category,
         description,
         image,
-        isDeleted,
+        price,
+        isDeleted
       }
+    }).done(function(res) {
+      console.log(res);
+
+      (window.location.href = `/design.html?id=${res.id}`),
+        alert("Design Successfully Created");
     });
   });
 
@@ -66,13 +86,19 @@ $(document).ready(function() {
   if (id != null) {
     $.ajax({
       url: `http://localhost:3000/designs/${id}`,
-      type: "GET",
+      method: "GET",
       success: function(response) {
-        let { name, designer, category, description, image } = response;
+        let { name, designer, category, description, image, price } = response;
         $("h1#designName").text(name);
         $("span#designerName").text(designer);
         $("span#category").text(category);
         $("p#description").text(description);
+        $("p#price").text(
+          parseFloat(price).toLocaleString("en-NG", {
+            style: "currency",
+            currency: "NGN"
+          })
+        );
         $("#designImg").attr("src", image);
         $("#updateLink").attr("href", `/update-design.html?id=${id}`);
 
@@ -82,6 +108,7 @@ $(document).ready(function() {
         //$(`#category`).val(category);
         $("#description").text(description);
         $("#image").attr("value", image);
+        $("#price").attr("value", price);
       }
     });
   }
@@ -94,6 +121,7 @@ $(document).ready(function() {
     let category = $("#category").val();
     let description = $("#description").val();
     let image = $("#image").val();
+    let price = $("#price").val();
     $.ajax({
       url: `http://localhost:3000/designs/${id}`,
       method: "PATCH",
@@ -102,7 +130,8 @@ $(document).ready(function() {
         designer,
         category,
         description,
-        image
+        image,
+        price
       }
     }).done(function() {
       window.location.href = `/design.html?id=${id}`;
@@ -114,10 +143,10 @@ $(document).ready(function() {
   $("#deleteDesign").on("click", function() {
     let confirmed = confirm("Confirm Delete");
 
-    if(confirmed){
+    if (confirmed) {
       $.ajax({
         url: `http://localhost:3000/designs/${id}`,
-        type: "PATCH",
+        method: "PATCH",
         data: {
           isDeleted: true
         }
@@ -127,4 +156,30 @@ $(document).ready(function() {
       });
     }
   });
+
+  // Login functionality
+  $("#loginForm").on("submit", e => {
+    e.preventDefault();
+    let username = $("#username").val();
+    let password = $("#password").val();
+    $.ajax({
+      url: `http://localhost:3000/users?username=${username}&password=${password}`,
+      method: "GET"
+    }).done(response => {
+      if (response) {
+        window.localStorage.setItem("user", username);
+        $("#valid").show();
+        $("#invalid").hide();
+        window.location = "/";
+      } else {
+        $("#valid").hide();
+        $("#invalid").show();
+      }
+    });
+  });
+  // Log Out functionality
+  $('#logout').on('click', () => {
+    window.localStorage.removeItem('user');
+    window.location = "/login.html";
+  })
 });
