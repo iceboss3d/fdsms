@@ -21,7 +21,7 @@
       <div class="navbar-nav">
         <a href="/login.html" class="nav-item nav-link logged-out active">Admin Login <span
           class="sr-only">(current)</span></a>
-        <button type="button" class="nav-item nav-link btn btn-secondary logged-in">Log Out</button>
+        <button type="button" class="nav-item nav-link btn btn-secondary logged-in" id="logout">Log Out</button>
       </div>
     </div>
   </nav>
@@ -30,6 +30,8 @@
       <div class="card mx-auto my-auto" style="width: 100%; max-width: 24rem;">
         <div class="card-body">
           <h3 class="card-title text-center">Admin Login</h1>
+            <div class="alert alert-danger" id="invalid">Invalid Username or Password</div>
+            <div class="alert alert-success" id="valid">Login Successfull</div>
             <form id="loginForm">
               <div class="form-group">
                 <label for="username">Username</label>
